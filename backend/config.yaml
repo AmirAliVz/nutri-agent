@@ -1,0 +1,26 @@
+# backend/config.yaml
+
+app:
+  name: "NutriAgent"
+  version: "0.1.0"
+  description: "AI-powered nutrition intelligence platform"
+
+nutrition:
+  usda_api_base: "https://api.nal.usda.gov/fdc/v1"
+  nutritionix_api_base: "https://trackapi.nutritionix.com/v2"
+  cache_ttl_days: 30
+
+llm:
+  primary_model: "claude-sonnet-4-6"
+  fallback_model: "gpt-4o-mini"
+  max_tokens: 1000
+  temperature: 0.1
+
+rag:
+  chunk_size: 512
+  chunk_overlap: 64
+  top_k_results: 5
+  embedding_model: "text-embedding-3-small"
+
+storage:
+  max_meal_history_days: 365
